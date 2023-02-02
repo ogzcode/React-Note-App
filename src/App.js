@@ -1,11 +1,11 @@
 import './App.css';
+import NoteApp from "./components/NoteApp.js";
 
 function App() {
   return (
-    <div className="App">
-
-    </div>
+    <>
+      <NoteApp/>
+    </>
   );
 }
-
 export default App;
