@@ -1,0 +1,55 @@
+.create__note {
+    background-color: antiquewhite;
+}
+
+.app__name {
+    text-align: center;
+    padding: 2rem 0;
+    color: darkslategrey;
+}
+
+.note__area {
+    height: 100%;
+    padding: 0 2rem;
+}
+
+.note__name {
+    margin-bottom: 1rem;
+}
+
+.note__name input {
+    margin-right: 1rem;
+    width: 50%;
+    outline: none;
+    padding: .5rem;
+    border: 2px solid darkslategray;
+    border-radius: 4px;
+    color: darkslategray;
+}
+
+.create__btn {
+    padding: .5rem 1.5rem;
+    background-color: white;
+    color: darkslategray;
+    border: 2px solid darkslategray;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: .1s;
+    font-weight: bold;
+
+}
+
+.create__btn:hover {
+    background-color: darkslategray;
+    color:antiquewhite;
+}
+
+.textarea {
+    width: 100%;
+    height: 70%;
+    padding: .75rem;
+    outline: none;
+    border: 2px solid darkslategray;
+    border-radius: 4px;
+    color: darkslategray;
+}

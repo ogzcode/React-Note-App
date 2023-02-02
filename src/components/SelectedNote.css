@@ -1,0 +1,51 @@
+.see__note {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    background-color: rgba(0,0,0,.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.see__inner {
+    width: 480px;
+    max-height: 480px;
+    background-color: white;
+    padding: 2rem;
+    border-radius: 6px;
+    position: relative;
+    overflow: hidden;
+}
+
+.see__inner h1 {
+    color: rgb(61, 61, 61);
+    margin-bottom: .5rem;
+}
+
+.see__inner p {
+    overflow-wrap: break-word;
+    overflow-y: scroll;
+    background-color: rgb(250, 250, 250);
+    height: 100%;
+    padding: 1rem;
+    color:rgb(70, 70, 70);
+}
+
+.see__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    background-color: rgb(238, 0, 0);
+    border-top-right-radius: 6px;
+    color: white;
+    border: none;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
