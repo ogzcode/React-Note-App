@@ -1,8 +1,7 @@
 import { FaTrash, FaPlus } from "react-icons/fa";
-function Note({ name, date, onClick = f =>f}) {
-    const handleClick = (state) => {
-        onClick({"name": props.name, "state": state});
-    };
+import { useNote } from "../hooks/useNote";
+function Note({ id, name, date}) {
+    const {removeNote, select} = useNote();
 
     return (
         <div className='note'>
@@ -10,10 +9,10 @@ function Note({ name, date, onClick = f =>f}) {
             <div className='note__bottom'>
                 <p className='note__time'>{date}</p>
                 <div className='note__btn--box'>
-                    <button className='note__btn' onClick={() => handleClick(true)}>
+                    <button className='note__btn' onClick={() => select(id)}>
                         <FaPlus/>
                     </button>
-                    <button className='note__btn' onClick={() => handleClick(false)}>
+                    <button className='note__btn' onClick={() => removeNote(id)}>
                         <FaTrash/>
                     </button>
                 </div>

@@ -40,7 +40,7 @@ function NoteSide(props) {
             </div>
             {
                 filterData.map((d, i) =>
-                    <Note name={d.name} date={d.date} key={i} onClick={props.onClick} />
+                    <Note id={d.id} name={d.name} date={d.date} key={i}/>
                 )
             }
         </div>

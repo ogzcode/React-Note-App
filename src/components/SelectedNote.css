@@ -43,9 +43,12 @@
     border-top-right-radius: 6px;
     color: white;
     border: none;
-    width: 32px;
-    height: 32px;
+    width: 36px;
+    height: 36px;
     font-size: 18px;
     font-weight: bold;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
