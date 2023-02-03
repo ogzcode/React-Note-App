@@ -23,12 +23,15 @@
     outline: none;
     border: 2px solid antiquewhite;
     color: darkslategray;
+    border-radius: 4px;
+    box-shadow: 0px 2px 4px -1px antiquewhite;
 }
 
 .note {
-    background-color: antiquewhite;
+    background-color: white;
+    border: 2px solid antiquewhite;
+    box-shadow: 0px 2px 4px -1px antiquewhite;
     border-radius: 6px;
-    box-shadow: 0px 2px 1px rgba(0,0,0,.1);
     padding: 1rem;
     margin-bottom: 1.5rem;
 }
@@ -51,9 +54,14 @@
     color: lightslategray;
 }
 
+.note__btn--box {
+    display: flex;
+}
+
 .note__btn {
-    width: 28px;
-    height: 28px;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
     margin: 0 .5rem;
     border: 2px solid darkslategray;
     border-radius: 4px;
@@ -61,6 +69,9 @@
     cursor: pointer;
     color: darkslategray;
     transition: .2s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .note__btn:hover {
