@@ -4,10 +4,10 @@ import SelectedNote from "./SelectedNote";
 import { useNote } from "../hooks/useNote";
 
 function NoteApp() {
-    const {noteList, selectedNote} = useNote();
+    const {selectedNote} = useNote();
     return (
         <div className='App'>
-            <NoteSide data={noteList}/>
+            <NoteSide/>
             <CreateNote />
             {
                 selectedNote && 

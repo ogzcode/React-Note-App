@@ -6,9 +6,10 @@ function App() {
   return (
     <>
       <NoteProvider>
-        <NoteApp/>
+        <NoteApp />
       </NoteProvider>
     </>
   );
 }
+
 export default App;

@@ -1,33 +1,39 @@
 import { useEffect, useState } from "react";
+import { useNote } from "../hooks/useNote";
 import Note from "./Note";
 import "./NoteStyle.css"
 
-function NoteSide(props) {
+function NoteSide() {
+    const { noteList } = useNote();
     const [note, setNote] = useState("");
-    const [data, setData] = useState([]);
     const [filterData, setFilterData] = useState([]);
 
     useEffect(() => {
-        setData(props.data);
         if (note === "") {
-            setFilterData(props.data);
+            setFilterData(noteList);
         }
-    }, [props.data]);
+        else {
+            filter(note);
+        }
+    }, [noteList]);
 
     function onChange(e) {
         setNote(e.target.value);
 
         if (e.target.value === "") {
-            setFilterData(data);
+            setFilterData(noteList);
             return;
         }
+        filter(e.target.value);
+    }
 
-        const newData = props.data.filter((d) => {
-            return d.name.includes(e.target.value);
+    const filter = (name) => {
+        const newData = noteList.filter((d) => {
+            return d.name.includes(name);
         });
 
         setFilterData(newData);
-    }
+    };
     return (
         <div className='note__container'>
             <div className='search__note'>
@@ -40,7 +46,7 @@ function NoteSide(props) {
             </div>
             {
                 filterData.map((d, i) =>
-                    <Note id={d.id} name={d.name} date={d.date} key={i}/>
+                    <Note id={d.id} name={d.name} date={d.date} key={i} />
                 )
             }
         </div>
