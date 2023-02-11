@@ -4,5 +4,5 @@ React.js ile geliştirdiğim not tutma uygulaması.Kayıt edilen notlar localSto
 ## Kullandığım Teknolojiler
 * React.js
 * Pure CSS
-* useContext
+* Context API
 
