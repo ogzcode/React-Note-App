@@ -7,3 +7,5 @@ React.js ile geliştirdiğim not tutma uygulaması.Kayıt edilen notlar localSto
 * Context API
 * localStorage
 
+### Ekran Görüntüsü
+![resim](https://user-images.githubusercontent.com/58819819/218436261-14e49b83-7a5c-41fa-81d9-4863554e6714.png)
