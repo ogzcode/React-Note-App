@@ -5,4 +5,5 @@ React.js ile geliştirdiğim not tutma uygulaması.Kayıt edilen notlar localSto
 * React.js
 * Pure CSS
 * Context API
+* localStorage
 
