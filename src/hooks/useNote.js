@@ -4,7 +4,7 @@ const NoteContext = createContext();
 export const useNote = () => useContext(NoteContext);
 
 export default function NoteProvider({ children }){
-    const [noteList, setNoteList] = useState([]);
+    const [noteList, setNoteList] = useState(JSON.parse(localStorage.getItem("notes")) || []);
     const [selectedNote, setSelect] = useState(null);
 
     const select = (id) => {
@@ -24,12 +24,15 @@ export default function NoteProvider({ children }){
             id: lastId,
             ...data
         }];
-
+        localStorage.setItem("notes", JSON.stringify(newData));
         setNoteList(newData);
     };
 
     const removeNote = (id) => {
-        setNoteList(noteList.filter(note => note.id !== id));
+        const newData = noteList.filter(note => note.id !== id);
+        
+        localStorage.setItem("notes", JSON.stringify(newData));
+        setNoteList(newData);
     };
 
     return (
